@@ -2,9 +2,9 @@
 
 [![CI status](https://github.com/tykhon-k/e2e-testing/actions/workflows/ci.yml/badge.svg)](https://github.com/tykhon-k/e2e-testing/actions/workflows/ci.yml)
 
-I built this project from scratch in just a few hours to demonstrate my ability to design and implement a **scalable end-to-end automation framework** using **Cypress** and **TypeScript**.
+This project demonstrates my ability to design and implement a scalable **end-to-end test automation** framework from scratch using **Cypress** and **TypeScript**.
 
-My main goal was to create a **robust technical foundation** — clean, modular, and extensible — that reflects how a real-world UI automation system should be built in a collaborative engineering environment.
+The focus was on building a clean, modular, and extensible foundation — reflecting how UI automation system should be structured in collaborative engineering environments.
 
 ## ✨ Features
 
