@@ -1,0 +1,45 @@
+name: Cypress E2E Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cypress-run:
+    name: Cypress Run
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests
+        run: npx cypress run --browser ${{ matrix.browser }}
+        continue-on-error: false
+
+      - name: Upload screenshots on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots-${{ matrix.browser }}
+          path: cypress/screenshots
+          retention-days: 7
+
+      - name: Upload videos on failure (if enabled)
+        uses: actions/upload-artifact@v4
+        if: failure() && env.CYPRESS_VIDEO == 'true'
+        with:
+          name: cypress-videos-${{ matrix.browser }}
+          path: cypress/videos
+          retention-days: 7

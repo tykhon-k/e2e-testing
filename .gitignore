@@ -1,0 +1,27 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+cypress/downloads/
+cypress.env.json
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env*.local
+.env.*

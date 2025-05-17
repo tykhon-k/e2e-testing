@@ -1,0 +1,21 @@
+{
+  "name": "e2e-testing",
+  "version": "1.0.0",
+  "description": "E2E testing with Cypress and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "cypress:headless": "cypress run",
+    "cypress:headless:spec": "cypress run --spec",
+    "cypress:open": "cypress open"
+  },
+  "author": "Tykhon Kozachenko",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.0.0",
+    "typescript": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-cypress": "^2.15.0"
+  }
+}
