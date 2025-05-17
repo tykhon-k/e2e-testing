@@ -4,8 +4,8 @@
   "description": "E2E testing with Cypress and TypeScript",
   "main": "index.js",
   "scripts": {
-    "cypress:headless": "cypress run",
-    "cypress:headless:spec": "cypress run --spec",
+    "cypress:cli": "cypress run",
+    "cypress:cli:spec": "cypress run --spec",
     "cypress:open": "cypress open"
   },
   "author": "Tykhon Kozachenko",

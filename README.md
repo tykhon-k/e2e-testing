@@ -62,19 +62,13 @@ npm run cypress:open
 To run all tests headlessly in the default browser (Electron), similar to how they might run in a CI environment:
 
 ```bash
-npm run cypress:headless
+npm run cypress:cli
 ```
 
-To run a specific spec file headlessly:
+To run a specific spec file headlessly, for example:
 
 ```bash
-npm run cypress:headless:spec -- --spec "cypress/e2e/tests/your_spec_file.cy.ts"
-```
-
-For example:
-
-```bash
-npm run cypress:headless:spec -- --spec "cypress/e2e/tests/login.cy.ts"
+npm run cypress:cli:spec "cypress/e2e/tests/your_spec_file.cy.ts"
 ```
 
 (Note: The `package.json` scripts provide convenient ways to run tests. For more specific browser choices or other options not covered by these scripts, you can run `npx cypress run` with specific flags directly, e.g., `npx cypress run --browser chrome`.)
